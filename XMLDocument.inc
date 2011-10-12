@@ -36,7 +36,8 @@ class XMLDocumentValidator {
    */
   public function __construct(XMLSchemaFormat $type, $filename = NULL) {
     $this->type = $type;
-    if ($filename === NULL && $type !== XMLSchemaFormat::DTD()) {
+    $this->filename = $filename;
+    if ($this->filename === NULL && $type !== XMLSchemaFormat::DTD()) {
       throw new InvalidArgumentException('No file provided.');
     }
   }
@@ -49,13 +50,11 @@ class XMLDocumentValidator {
   public function isValid(DOMDocument $document) {
     switch ($this->type) {
       case XMLSchemaFormat::DTD():
-        $document->validate();
-        break;
+        return $document->validate();
       case XMLSchemaFormat::XSD():
-        $document->schemaValidate($this->filename);
-        break;
+        return $document->schemaValidate($this->filename);
       case XMLSchemaFormat::RNG():
-        break;
+        return $document->relaxNGValidate($this->filename);
     }
   }
 
@@ -64,7 +63,7 @@ class XMLDocumentValidator {
 /**
  * Handles generic XML concepts and data.
  */
-class XMLDocument extends DOMDocument {
+class _XMLDocument extends DOMDocument {
 
   /**
    *
