@@ -3,20 +3,14 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink"
 	xsi:schemaLocation="urn:isbn:1-931666-33-4 http://eac.staatsbibliothek-berlin.de/schema/cpf.xsd">
 	<control>
-		<recordId>unknown</recordId>
-		<maintenanceStatus>new</maintenanceStatus>
+		<recordId></recordId>
+		<maintenanceStatus></maintenanceStatus>
 		<maintenanceAgency>
-			<agencyName>unknown</agencyName>
+			<agencyName></agencyName>
 		</maintenanceAgency>
 		<maintenanceHistory>
-			<maintenanceEvent>
-				<eventType>created</eventType>
-				<eventDateTime></eventDateTime>
-				<agentType>machine</agentType>
-				<agent></agent>
-			</maintenanceEvent>
 		</maintenanceHistory>
-    </control>
+	</control>
 	<cpfDescription>
 		<identity>
 			<entityType>person</entityType>
