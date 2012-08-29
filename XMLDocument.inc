@@ -154,6 +154,8 @@ class XMLDocumentNamepaces {
 
 /**
  * Handles generic XML concepts and data.
+ * 
+ * Underscore prevents collision with the defined class in XML forms, one day they should be the same class.
  */
 class _XMLDocument extends DOMDocument {
 

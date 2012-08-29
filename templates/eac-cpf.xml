@@ -10,13 +10,22 @@
 		</maintenanceAgency>
 		<maintenanceHistory>
 		</maintenanceHistory>
-	</control>
+	</control>	
 	<cpfDescription>
 		<identity>
+			<entityId>id</entityId>
 			<entityType>person</entityType>
 			<nameEntry>
 				<part></part>
 			</nameEntry>
 		</identity>
+		<description>
+			<occupation>
+				<term>Title</term>
+				<placeEntry localType="department">department</placeEntry>
+			</occupation>
+			
+			</function>
+		</description>
 	</cpfDescription>
 </eac-cpf>
